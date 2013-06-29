@@ -8,6 +8,47 @@ body {
 	background-attachment: fixed;
 }
 
+nav#nav-menu {
+	position: absolute;
+	width: 280px;
+	height: 250px;
+	left: 0;
+	top: 50%;
+	margin-top: -150px;
+}
+
+nav#nav-menu ul#nav-menu-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+nav#nav-menu ul#nav-menu-list li {
+	width: 280px;
+	height: 110px;
+	background: url('../Pictures/WoodPanel.png');
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 100% 100%;
+	text-align: center;
+	margin: 30px 0 30px -200px;
+}
+
+nav#nav-menu ul#nav-menu-list li a {
+	display: block;
+	width: 280px;
+	height: 110px;
+	text-decoration: none;
+	line-height: 104px;
+	font-family: Trebuchet MS;
+	font-size: 40px;
+	font-weight: bolder;
+	letter-spacing: 1.2px;
+	color: #222222;
+	text-shadow: -1px -1px 3px #666666,
+					1px 1px 3px #FFFFFF;
+}
+
 section#main-content, section#preview {
 	position: absolute;
 	top: 50%;
@@ -19,15 +60,43 @@ section#main-content {
 	background: rgba(80, 80, 80, 0.6);
 	border: 5px solid black;
 	border-radius: 6px;
+	box-shadow: 0 0 10px #666;
 	left: 50%;
 	height: 100px;
 	width: 780px;
-	margin-left: -700px;
+	margin-left: -650px;
 	padding: 0 10px 0 10px;
 }
 
+section#main-content section#top-panel {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+section#main-content section#top-panel img#top-panel-icon {
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+
+section#main-content section#top-panel img#logo {
+	position: relative;
+	width: 300px;
+	height: 80px;
+}
+
+section#main-content section#top-panel #slogan {
+	font-family: Trebuchet MS;
+	font-size: 26px;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: 0 0 20px white;
+	color: #ddd;
+}
+
 section#main-content section#description {
-	padding-top: 20px;
+	margin-top: 150px;
 	width: inherit;
 }
 
@@ -40,7 +109,7 @@ section#main-content .learn {
 	cursor: pointer;
 }
 
-section#main-content section#description p {
+section#main-content section#description p, section#main-content section#features ul {
 	display: none;
 	width: inherit;
 	text-align: justify;
@@ -50,13 +119,143 @@ section#main-content section#description p {
 	line-height: 24px;
 }
 
-section#main-content section#features  ul{
+section#main-content section#features ul {
 	
 }
 
 section#preview {
-	height: 600px;
+	height: 650px;
 	left: 50%;
-	margin-left: 300px;
-	width: 300px;
+	margin-left: 430px;
+	width: 380px;
+}
+
+section#preview * {
+	margin: 0;
+	padding: 0;
+}
+
+section#preview .gallery-wrapper {
+	position: relative;
+	left: 0;
+	width: 380px;
+	height: 600px;
+	border: 3px solid black;
+	z-index: 0;
+}
+
+section#preview .gallery-wrapper:hover .left-button, section#preview .gallery-wrapper:hover .right-button {
+	display: block;
+}
+
+section#preview .gallery-wrapper .gallery-mask {
+	position: relative;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 0;
+}
+
+section#preview .gallery-wrapper .gallery-mask ul.gallery-ul {
+	list-style: none;
+	width: auto;
+	height: 600px;
+	z-index: 0;
+}
+
+section#preview .gallery-wrapper .gallery-mask ul.gallery-ul  li.gallery-li {
+	position: relative;
+	float: left;
+	width: 380px;
+	height: inherit;
+	z-index: 0;
+}
+
+section#preview .gallery-wrapper .gallery-mask ul.gallery-ul  li.gallery-li img.gallery-img {
+	position: relative;
+	left: 0;
+	width: inherit;
+	height: inherit;
+	z-index: 0;
+}
+
+.left-button, .right-button {
+	display: none;
+	position: absolute;
+	top: 0;
+	height: inherit;
+	width: 60px;
+	background: rgba(80, 80, 80, 0.2);
+	cursor: pointer;
+	
+	z-index: 1;
+}
+
+.left-button {
+	left: 0;
+}
+
+.right-button {
+	right: 0;
+}
+
+.left-button-inner, .right-button-inner {
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	width: 40px;
+	height: 70px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 40px 70px;
+}
+
+.left-button-inner {
+	left: 10px;
+	background-image: url('../Pictures/Arrow_Left_Light.png');
+}
+
+.right-button-inner {
+	right: 10px;
+	background-image: url('../Pictures/Arrow_Right_Light.png');
+}
+
+.left-button:hover, .right-button:hover {
+	background: rgba(220, 220, 220, 0.5);
+}
+
+.left-button:hover .left-button-inner{
+	background-image: url('../Pictures/Arrow_Left_Dark.png');
+}
+
+.right-button:hover .right-button-inner {
+	background-image: url('../Pictures/Arrow_Right_Dark.png');
+}
+
+.button-panel {
+	position: absolute;
+	top: 620px;
+	left: 50%;
+	width: 90px;
+	height: 20px;
+	margin-left: -45px !important;
+}
+
+.button-circle {
+	float: left;
+	width: 10px;
+	height: 10px;
+	background-color: #90EE90;
+	border-radius: 100px;
+	border: 3px solid black;
+	box-shadow: 0 0 10px #90EE90;
+	margin: auto 5px auto 5px !important;
+	cursor: pointer;
+}
+
+.button-circle:first-child {
+	background-color: black;
+	border: 3px solid #00EE76;
+	box-shadow: 0 0 10px black;	
 }
