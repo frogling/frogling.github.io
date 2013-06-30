@@ -7,6 +7,9 @@ var totalWidth = 0;
 $(document).ready( function() {
 	$('section#main-content').css('height', contentHeight+'px');
 	
+	$('section#preview .button-circle:first-child').css('background-color', '#aaaaaa').
+		css('border-color', 'white').css('box-shadow', '0 0 20px #aaaaaa');
+	
 	$('section#description .learn').click( function () {
 		var $text =  $(this).parent().children('p');
 		if($text.is(':visible')) {
@@ -76,17 +79,17 @@ $(document).ready( function() {
 	$('.button-circle').hover( function(){
 		if($('.button-circle').index($(this)) != curImage - 1) {
 			$(this).stop(true, true).animate( {
-				backgroundColor: '#00FA9A',
-				borderColor: '#48D1CC',
-				boxShadow: '#00FA9A'
+				backgroundColor: 'white',
+				borderColor: 'black',
+				boxShadow: '0 0 20px white'
 			}, 250);
 		}
 	}, function() {
 		if($('.button-circle').index($(this)) != curImage - 1) {
 			$(this).stop(true, true).animate( {
-				backgroundColor: '#90EE90',
-				borderColor: 'black',
-				boxShadow: '#90EE90'
+				backgroundColor: 'black',
+				borderColor: '#aaaaaa',
+				boxShadow: '0 0 20px #aaaaaa'
 			}, 250);
 		}
 	});
@@ -124,14 +127,14 @@ function moveRight(){
 function colorChosen(el){
 	$('.button-circle').each( function() {
 		$(this).animate({
-			backgroundColor: '#90EE90',
-			borderColor: 'black',
-			boxShadow: '0 0 20px #90EE90'
+			backgroundColor: 'black',
+			borderColor: '#aaaaaa',
+			boxShadow: '0 0 20px #aaaaaa'
 		}, 500);
 	});
 	$(el).animate({
-		backgroundColor: 'black',
-		borderColor: '#00EE76',
-		boxShadow: '0 0 20px black'
+		backgroundColor: '#aaaaaa',
+		borderColor: 'white',
+		boxShadow: '0 0 20px #aaaa'
 	}, 500);
 }
