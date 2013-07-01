@@ -1,46 +1,12 @@
-var contentHeight = 250;
 var numImages = 0;
 var curImage = 1;
 var imageWidth = 380;
 var totalWidth = 0;
 
 $(document).ready( function() {
-	$('section#main-content').css('height', contentHeight+'px');
 	
 	$('section#preview .button-circle:first-child').css('background-color', '#aaaaaa').
 		css('border-color', 'white').css('box-shadow', '0 0 20px #aaaaaa');
-	
-	$('section#description .learn').click( function () {
-		var $text =  $(this).parent().children('p');
-		if($text.is(':visible')) {
-			$text.slideUp();
-			contentHeight -= 170;
-		} else {
-			$text.slideDown();
-			contentHeight += 170;
-		}
-		$('section#main-content').animate({
-			height: contentHeight
-		}, 'medium');
-	});
-	
-	$('section#features .learn').click( function () {
-		var $list =  $(this).parent().children('ul');
-		if($list.is(':visible')) {
-			$list.slideUp();
-			contentHeight -= 170;
-		} else {
-			$list.slideDown();
-			contentHeight += 170;
-		}
-		$('section#main-content').animate({
-			height: contentHeight
-		}, 'medium');
-	});
-	
-	$('.learn').dblclick( function() {
-		return false;
-	});
 	
 	$('#nav-menu #nav-menu-list li').hover( function() {
 		if (!$(this).hasClass('animated')) {

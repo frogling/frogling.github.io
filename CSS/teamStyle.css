@@ -25,10 +25,13 @@ nav#nav-menu ul#nav-menu-list {
 nav#nav-menu ul#nav-menu-list li {
 	width: 280px;
 	height: 110px;
-	background: url('../Pictures/WoodPanel.png');
-	background-repeat: no-repeat;
+	background: url('../Pictures/WoodPlank.jpg');
 	background-position: top left;
 	background-size: 100% 100%;
+	background-repeat: no-repeat;
+/* 	background: #55AE3A; */
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
 	text-align: center;
 	margin: 30px 0 30px -200px;
 }
@@ -43,9 +46,8 @@ nav#nav-menu ul#nav-menu-list li a {
 	font-size: 40px;
 	font-weight: bolder;
 	letter-spacing: 1.2px;
-	color: #222222;
-	text-shadow: -1px -1px 3px #666666,
-					1px 1px 3px #FFFFFF;
+	color: rgba(0,0,0,0.6);
+	text-shadow: 2px 2px 3px rgba(139,115,85,0.1);
 }
 
 section#main-content {

@@ -6,6 +6,8 @@ body {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	overflow-y: scorll;
+	overflow-x: hidden;
 }
 
 nav#nav-menu {
@@ -26,27 +28,29 @@ nav#nav-menu ul#nav-menu-list {
 nav#nav-menu ul#nav-menu-list li {
 	width: 280px;
 	height: 110px;
-	background: url('../Pictures/WoodPanel.png');
-	background-repeat: no-repeat;
+	background: url('../Pictures/WoodPlank.jpg');
 	background-position: top left;
 	background-size: 100% 100%;
+	background-repeat: no-repeat;
+/* 	background: #55AE3A; */
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
 	text-align: center;
 	margin: 30px 0 30px -200px;
 }
 
 nav#nav-menu ul#nav-menu-list li a {
 	display: block;
-	width: 280px;
-	height: 110px;
+	width: inherit;
+	height: inherit;
 	text-decoration: none;
-	line-height: 104px;
+	line-height: 110px;
 	font-family: Trebuchet MS;
 	font-size: 40px;
-	font-weight: bolder;
+	font-weight: 900;
 	letter-spacing: 1.2px;
-	color: #222222;
-	text-shadow: -1px -1px 3px #666666,
-					1px 1px 3px #FFFFFF;
+	color: rgba(0,0,0,0.6);
+	text-shadow: 2px 2px 3px rgba(139,115,85,0.1);
 }
 
 section#main-content, section#preview {
@@ -58,10 +62,27 @@ section#main-content, section#preview {
 
 section#main-content {
 	left: 50%;
-	height: 100px;
+	height: 580px;
 	width: 780px;
 	margin-left: -650px;
 	padding: 0 10px 0 10px;
+	background: url('../Pictures/WoodPlank.jpg');
+	background-position: top left;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	box-shadow: 0 0 20px black;
+}
+
+section#main-content section#frogs {
+	position: absolute;
+	top: -55px;
+	right: 10px;
+}
+
+section#main-content section#frogs .frog {
+	width: 60px;
+	hegiht: 60px;
 }
 
 section#main-content section#top-panel {
@@ -72,8 +93,8 @@ section#main-content section#top-panel {
 
 section#main-content section#top-panel img#top-panel-icon {
 	position: relative;
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 100px;
 }
 
 section#main-content section#top-panel img#logo {
@@ -92,31 +113,39 @@ section#main-content section#top-panel #slogan {
 }
 
 section#main-content section#description {
-	margin-top: 150px;
+	margin-top: 166px;
 	width: inherit;
 }
 
 section#main-content .learn {
 	margin-top: 15px;
-	color: #90EE90;
+	color: #32CD32;
+	letter-spacing: 1.2px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	font-family: Trebuchet MS;
-	font-size: 22px;
-	font-weight: bold;
-	cursor: pointer;
+	font-size: 28px;
+	font-weight: 900;
 }
 
 section#main-content section#description p, section#main-content section#features ul {
-	display: none;
 	width: inherit;
 	text-align: justify;
 	font-family: Trebuchet MS;
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 24px;
+	font-weight: 900;
+}
+
+section#main-content section#description p {
+	line-height: 32px;
+	color: #fff;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	font-size: 24px;
 }
 
 section#main-content section#features ul {
-	
+	line-height: 24px;
+	font-size: 20px;
+	color: #fff;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 section#preview {
@@ -248,4 +277,71 @@ section#preview .gallery-wrapper .gallery-mask ul.gallery-ul  li.gallery-li img.
 	box-shadow: 0 0 10px #AAAAAA;
 	margin: auto 5px auto 5px !important;
 	cursor: pointer;
+}
+
+section#purchase {
+	position: absolute;
+	margin-top: 10px;
+	left: 50%;
+	margin-left: -120px;
+	width: 240px;
+	height: 80px;
+}
+
+section#purchase a#google-play {
+	display: block;
+	background: url('../Pictures/googlePlay.png');
+	background-position: top left;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 80px;
+	width: 240px;
+/* 	line-height: 80px; */
+/* 	text-align: center; */
+/* 	text-decoration: none; */
+/* 	font-size: 24px; */
+/* 	font-weight: 900; */
+/* 	color: #F0F8FF; */
+/* 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+section#extra-content {
+	position: absolute;
+	top: 900px;
+	width: 100%;
+	height: 500px;
+}
+
+section#extra-content section#content1 {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -660px;
+	width: 1450px;
+	height: 400px;
+	padding: 0 10px 0 10px;
+	background: url('../Pictures/WoodPlank.jpg');
+	background-position: top left;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	box-shadow: 0 0 20px black;
+}
+
+section#extra-content section#content1 p {
+	width: 600px;
+	text-align: justify;
+	font-family: Trebuchet MS;
+	font-weight: 900;
+	line-height: 28px;
+	color: #fff;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+section#extra-content section#content1 p:first-child {
+	font-size: 28px;
+}
+
+section#extra-content section#content1 p:last-child {
+	font-size: 22px;
 }
